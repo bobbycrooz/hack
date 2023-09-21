@@ -1,7 +1,4 @@
-import { ShortLinkDataTypes } from "@/Types/endpoints";
-import { creatLinkAPI } from "@/api/endpoints/url.endpoint.ts";
-import React, { useEffect, useState } from "react";
-import Navbar from "@components/Navbar";
+
 
 const timeLineData = [
 	{
