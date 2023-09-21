@@ -1,0 +1,32 @@
+.btn {
+	width: 172px;
+	height: 53px;
+	flex-shrink: 0;
+
+	border-radius: 4px;
+	background: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
+
+	color: #fff;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+
+	
+	&.primary {
+		@apply text-white bg-[#c81e19];
+	}
+
+	&.ghost {
+		@apply text-gray-600 text-sm font-semibold  bg-transparent border-gray-200 border;
+	}
+
+	&.auth {
+		@apply h-[48px] py-3 text-[16px];
+	}
+
+	&:disabled {
+		@apply bg-gray-200 text-gray-50 border border-gray-50  space-x-6  cursor-not-allowed;
+	}
+}
