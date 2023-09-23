@@ -6,9 +6,10 @@ const Hero: React.FC = () => {
 
 
 	return (
-		<div className="w-[98.9vw] h-[100vh] bg-base relative border-b border-[#ffffff4d] ">
+		<div  id="hero" className="w-[98.9vw] h-[100vh] bg-base relative border-b border-[#ffffff4d]">
 			<Navbar />
 
+			{/* italic */}
 			<div className="w-full px-[77px] flex justify-end mt-8 ">
 				<h1 className="font-mon w-auto  text-[36px] font-bold italic  relative">
 					Igniting a Revolution in HR Innovation
@@ -19,27 +20,28 @@ const Hero: React.FC = () => {
 					</div>
 				</h1>
 			</div>
+
 			{/* star 1 */}
-			<img src="/h-star-white.svg" alt="" className="w-[26px] h-[32px] left-[140px] absolute" />
+			{/* <img src="/h-star-white.svg" alt="" className="w-[26px] h-[32px] left-[140px] absolute" /> */}
 
 			{/* blur */}
 			{/* <img src="/h-glow.svg" alt="" className="w-[600px] h-[700px] absolute left-[30px] -top-[40px]" /> */}
-			<div className="w-[1080px] h-[700px]  glow absolute left-[0px] top-[50px] "></div>
+			{/* <div className="w-[1080px] h-[700px]  glow absolute left-[0px] top-[50px] "></div> */}
 
 			{/* matrix */}
-			<div className="matrix w-full h-full absolute right-0 bottom-0 ">
+			{/* <div className="matrix w-full h-full absolute right-0 bottom-0  bg"> */}
 				{/* <img src="/h-glow.svg" alt="" className="w-[800px] h-[800px] right-0 bottom-[10px] absolute z-0" />
 				<img src="/h-boy.png" alt="" className="w-[700px] h-[600px] right-0 bottom-0 absolute man" />
 				<img src="/h-globe.png" alt="" className="w-[500px] h-[500px] right-[120px] bottom-[120px] absolute" /> */}
-			</div>
+			{/* </div> */}
 
 				{/* <img src="/h-fuck.png" alt="" className="w-[700px] h-[600px] right-0 bottom-0 absolute man" /> */}
 
 
 			{/* hero */}
-			<div className="hero_text absolute top-[60%] -translate-y-[60%]  text-[80px] font-cd-bold ml-[128px]">
+			<div className="hero_text absolute top-[90%] -translate-y-[90%]  text-[80px] font-cd-bold ml-[128px]">
 				<h1 className="hero_title relative  w-[660px] leading-normal">
-					<img src="/h-idea.svg" alt="" className="idea absolute w-[53px] h-[73px] right-[150px] -top-[40px]" />
+					<img src="/h-idea.svg" alt="" className="idea absolute w-[53px] h-[73px] right-[60px] -top-[40px]" />
 					{/* star 2 */}
 					<img src="/h-star.svg" alt="" className="w-[26px] h-[32px] -right-[20px] -top-[10px] absolute" />
 					getLinked Tech

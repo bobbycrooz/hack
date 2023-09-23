@@ -6,7 +6,7 @@ const TimeLine: React.FC = () => {
 
 
 	return (
-		<section className="bg-base w-full h-auto p-8 py-[80px]">
+		<section id="timeline" className="bg-base w-full h-auto p-8 py-[80px]">
 			{/* head */}
 			<div className="header w-full flex justify-center mt-[2px]">
 				<div className="w-[346px] text-white text-center">

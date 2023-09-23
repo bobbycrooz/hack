@@ -38,11 +38,11 @@ const Big: React.FC = () => {
 			{/*  */}
 			<section
 				id="partner"
-				className="partner w-full h-auto p-8 border-b border-[#ffffff4d]  flex flex-col items-center"
+				className="partner w-full h-auto p-[114px] border-b border-[#ffffff4d]  flex flex-col items-center bg-base"
 			>
 				{/* head */}
 				<div className="header w-full flex justify-center mt-[2px]">
-					<div className="w-[446px] text-white text-center">
+					<div className="w-[446px] text-white text-center ">
 						<h1 className="font-cd-bold ">Partners and Sponsors</h1>
 
 						<p className="font-mon text-sm  leading-[172.4%]">
@@ -61,8 +61,8 @@ const Big: React.FC = () => {
 			{/*  */}
 
 			<section
-				id="partner"
-				className="partner w-full h-auto p-8 border-b border-[#ffffff4d]  flex justify-center py-[77px]"
+				id="guard"
+				className="partner w-full h-auto p-8 border-b border-[#ffffff4d]  flex justify-center py-[77px] bg-base"
 			>
 				{/* <img src="/h-glow3.png" alt="" className="w-[400px] h-[950px] right-0 top-20 absolute z-0 br " /> */}
 				{/* text */}

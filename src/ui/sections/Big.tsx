@@ -64,11 +64,10 @@ const Big: React.FC = () => {
 			{/*
 			 */}
 
-			<section className="w-full bg-base py-[56px] border-b border-[#ffffff4d] flex justify-center px-[200px] items-center relative">
-				<img src="/h-glow3.png" alt="" className="w-[400px] h-[950px] right-0 top-20 absolute z-0 " />
+			<section id="rules" className="w-full bg-base py-[56px] border-b border-[#ffffff4d] flex justify-center px-[200px] items-center relative">
+				{/* <img src="/h-glow3.png" alt="" className="w-[400px] h-[950px] right-0 top-20 absolute z-0 " /> */}
 				{/* text */}
 				<div className="  w-[540px] relative">
-					<img src="/h-glow2.png" alt="" className="w-[800px] h-[400px] right-0 bottom-[10px] absolute z-0" />
 
 					<h1 className="into font-cd-bold text-[32px] g">Rules and</h1>
 					<h1 className="text-base-2 font-cd-bold text-[32px]">Guidelines</h1>
@@ -84,13 +83,13 @@ const Big: React.FC = () => {
 				<div className="spave w-[109px]"></div>
 
 				<div className="img relative w-[690px] h-[500px] ">
-					<img src="/big-seat.png" className="w-[664px]  h-[584px] absolute -top-14" alt="" />
+					<img src="/big-seat.png" className="w-[664px]   h-[584px] absolute -top-14" alt="" />
 				</div>
 			</section>
 
 			{/*  */}
 
-			<section className="w-full bg-base py-[56px] border-b border-[#ffffff4d] flex justify-center px-[200px] items-center">
+			<section id="people" className="w-full bg-base py-[56px] border-b border-[#ffffff4d] flex justify-center px-[200px] items-center">
 				<div className="img w-[590px] h-[500px]">
 					<img src="/h-people.png" className="w-full h-full" alt="" />
 				</div>
@@ -116,7 +115,7 @@ const Big: React.FC = () => {
 
 			{/*  */}
 
-			<section className="w-full bg-base py-[56px] border-b border-[#ffffff4d] flex justify-center px-[200px] items-center relative">
+			<section id="ask" className="w-full bg-base py-[56px] border-b border-[#ffffff4d] flex justify-center px-[200px] items-center relative">
 				{/* <img src="/h-glow3.png" alt="" className="w-[400px] h-[950px] right-0 top-20 absolute z-0 br " /> */}
 				{/* text */}
 				<div className="  w-[540px] relative">

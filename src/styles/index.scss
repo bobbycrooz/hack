@@ -15,6 +15,19 @@ body {
 	color: #fff;
 	font-family: "Montserrat", sans-serif;
 	// overflow-x: hidden;
+
+		&::-webkit-scrollbar {
+		width: 0px;
+		height: 0;
+	}
+
+	&::-webkit-scrollbar-track {
+		@apply bg-gray-300;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		@apply bg-gray-400 outline-1 outline-gray-400;
+	}
 }
 
 // *{
@@ -26,52 +39,6 @@ body {
 	border: 1px solid #9b48f5;
 	background: linear-gradient(90deg, rgba(188, 138, 225, 0.33) 0%, rgba(137, 173, 233, 0.35) 100%);
 	box-shadow: 0px 7px 19px 2px rgba(179, 209, 224, 0.25);
-}
-
-// .home {
-// 	background: url("./noise.svg");
-// 	background-color: #fafafa;
-// }
-
-// ------------------- Loader ------------------- //
-
-.loader-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	height: 20.5px;
-	margin-bottom: -5px;
-
-	&-roller {
-		position: absolute;
-		margin-top: -5px;
-		border-radius: 50%;
-		border-width: 3px;
-		border-style: solid;
-		border-color: transparent rgba(255, 255, 255, 0.793) rgba(255, 255, 255, 0.793) rgba(255, 255, 255, 0.793);
-		width: 18px;
-		height: 18px;
-		background: transparent none repeat scroll 0 0;
-		animation: 1500ms linear 0s normal none infinite running rotate-loader;
-		-webkit-animation: 1500ms linear 0s normal none infinite running rotate-loader;
-
-		&.two {
-			border-color: transparent transparent #ff4b00 #ff4b00;
-			width: 18px;
-			height: 18px;
-		}
-	}
-
-	@keyframes rotate-loader {
-		100% {
-			transform: rotate(360deg);
-			-webkit-transform: rotate(360deg);
-			-moz-transform: rotate(360deg);
-			-ms-transform: rotate(360deg);
-			-o-transform: rotate(360deg);
-		}
-	}
 }
 
 .base-grad {
@@ -86,33 +53,19 @@ body {
 	opacity: 68%;
 }
 
-// .hero{
-// 		background: url("/h-matrix.png");
-// 	background-position: bottom right;
-// 	background-size: contain;
-// 	background-repeat: no-repeat;
-// 	// opacity: 68%;
-// }
 
-.matrix {
-	background: url("/h-fuck.png");
-	// background-blend-mode: luminosity;
-	background-position: bottom right;
-	background-blend-mode: hard-light;
-	background-size: contain;
+
+
+
+#hero {
+	background-image: url("/h-globe.png"), url("/h-glow1.png"), url("/h-boy.png"), url("/h-glow2.png"), url("/h-matrix.png");
+	background-position: right 50px bottom 50px, top 0px left 0px, right 0px bottom 0px, bottom 50px right -150px , right 0 bottom 0;
+	background-size:  40%,50%, 45%, 50%, 60%;
 	background-repeat: no-repeat;
-	// background-color: lightgray;
+	background-blend-mode: hard-light, hard-light, luminosity, hard-light, luminosity;
 }
 
-.man {
-	background: url(/h-boy.png), 0% / cover no-repeat;
-	background-blend-mode: luminosity;
-	// opacity: 40%;
-}
 
-img {
-	background-blend-mode: hard-light;
-}
 
 .timeline {
 	.bullet {
@@ -133,46 +86,126 @@ img {
 	}
 }
 
-
-#medal{
-	background-image: url('/h-medal-bg.png');
+#medal {
+	background-image: url("/h-medal-bg.png");
 	background-blend-mode: color-burn;
 }
 
-
-#medal{
-	background-image: url('/h-testimonial.png');
+#medal {
+	background-image: url("/h-testimonial.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-blend-mode: hard-light;
 }
 
-
-#h-cup{
-	background-image: url('/h-cup.png');
+#h-cup {
+	background-image: url("/h-cup.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-blend-mode: hard-light;
 }
 
-
-
-
-#rewards{
-	background-image: url('/h-rewards.png');
+#rewards {
+	background-image: url("/h-rewards.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 	// background-blend-mode: hard-light;
 }
 
-footer{
-	
-		background-image: url('/h-star-bg.svg');
+footer {
+	background-image: url("/h-star-bg.svg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 	// background-blend-mode: hard-light;
+}
+
+.contact_section {
+	.form_box {
+		height: auto;
+		flex-shrink: 0;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.03);
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+		&-w {
+			width: 617px;
+		}
+	}
+}
+
+#contact {
+	// background-image:url("/h-cup.png"),  url("/h-glow1.png");
+	background-image: url("/h-glow-c.png"), url("/h-glow2.png");
+	background-position: 04.25px -7px, 900px 204.25px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-blend-mode: hard-light, hard-light;
+}
+
+input,
+textarea,
+select {
+	@apply w-full bg-transparent  text-white border border-white p-4 rounded;
+}
+
+textarea {
+	@apply h-[119px];
+}
+
+
+
+#rules{
+		background-image: url("/h-glow2.png"), url("/h-glow3.png");
+	background-position: top -100px left 107px, right 0px bottom -155px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-blend-mode: hard-light, hard-light;
+}
+
+#people{
+		background-image: url("/h-glow2.png"), url("/h-glow2.png");
+	background-position: bottom -160px left 50px, right -300px bottom -420px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-blend-mode: hard-light, hard-light;
+}
+
+#ask{
+		background-image:  url("/h-glow2.png");
+	background-position:  right -300px top -435px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-blend-mode:  hard-light;
+}
+
+
+// #partner {
+// 	// background-image:url("/h-cup.png"),  url("/h-glow1.png");
+// 	background-image: url("/h-glow2.png"), url("/h-glow2.png");
+// 	background-position: 04.25px -7px, 900px 204.25px;
+// 	background-repeat: no-repeat;
+// 	background-size: contain;
+// 	background-blend-mode: hard-light, hard-light;
+// }
+
+
+#partner{
+		background-image: url("/h-glow2.png"), url("/h-glow2.png");
+	background-position: top -120px left -70px, right -300px bottom -220px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-blend-mode: hard-light, hard-light;
+}
+
+
+#guard{
+		background-image:  url("/h-glow2.png");
+	background-position:  left -300px bottom -380px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-blend-mode: hard-light;
 }
