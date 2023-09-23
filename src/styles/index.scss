@@ -45,6 +45,15 @@ body {
 	background: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
 }
 
+.navlist {
+	&.active {
+		background: linear-gradient(90deg, #903aff 3.08%, #ff26b9 93.85%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
 .glow {
 	background: url("/h-glow1.png");
 	background-position: center;
@@ -165,7 +174,20 @@ footer {
 input,
 textarea,
 select {
-	@apply w-full bg-transparent  text-white border border-white p-4 rounded;
+	border-radius: 12px;
+background: rgba(255, 255, 255, 0.03);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	@apply w-full bg-transparent mt-1  text-white border border-white p-4 rounded;
+
+	@include smallPhone {
+		@apply text-xs;
+	}
+}
+
+.field_l {
+	label {
+		@apply text-xs;
+	}
 }
 
 textarea {

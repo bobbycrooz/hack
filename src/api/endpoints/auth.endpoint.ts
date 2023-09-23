@@ -1,52 +1,34 @@
 // import { LoginUserType, UserTypes } from "@types";
-import { AuthTypes, AuthTypesLogin, ResponsTypes } from "@/Types/endpoints";
+import { ResponsTypes } from "@/Types/endpoints";
 import service from "../index";
 
-export function logInAPI(data: AuthTypesLogin): ResponsTypes {
+export function contactAPI(data: any): ResponsTypes {
 	// console.log('look i got here');
 	return service({
-		url: "/user/login",
+		url: "/hackathon/contact-form",
 		method: "post",
 		data,
 	});
 }
 
 
-export function RegisterAPI(data: AuthTypes): ResponsTypes {
+export function RegisterAPI(data: any): ResponsTypes {
 	// console.log('look i got here');
 	return service({
-		url: "/user",
+		url: "/hackathon/registration",
 		method: "post",
 		data,
 	});
 }
 
-export function getUser(id?: string): ResponsTypes {
+
+
+export function categoryAPI(): ResponsTypes {
 	// console.log('look i got here');
 	return service({
-		url: id ? `/user?id=${id}` : '/user',
+		url: "/hackathon/categories-list",
 		method: "get",
-		
 	});
 }
 
-
-export function connectAPI(data: any): ResponsTypes {
-	// console.log('look i got here');
-	return service({
-		url: "/user/connect",
-		method: "post",
-		data
-	});
-}
-
-
-export function profileAPI(data: any): ResponsTypes {
-	// console.log('look i got here');
-	return service({
-		url: "/user",
-		method: "patch",
-		data,
-	});
-}
 

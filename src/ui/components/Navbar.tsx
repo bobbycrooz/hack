@@ -1,7 +1,7 @@
 // import React from "react";
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface proTypes {
 	contact?: boolean;
@@ -12,6 +12,7 @@ const Navbar = ({ contact }: proTypes) => {
 	// const [shortLink, setShortLink] = useState<string>("");
 	// const [shortLinkData, setShortLinkData] = useState<ShortLinkDataTypes>();
 	const [showMenu, setShowMenu] = useState<boolean>(false);
+	const location = useLocation();
 	// const [Coppied, setCoppied] = useState<boolean>(false);
 	const navigate = useNavigate();
 
@@ -30,16 +31,14 @@ const Navbar = ({ contact }: proTypes) => {
 		navigate(link);
 	}
 
-	function handlemenu()
-	{
-		setShowMenu(!showMenu)
-		
+	function handlemenu() {
+		setShowMenu(!showMenu);
 	}
 
 	const navList = [
 		{
 			name: "Timeline",
-			link: "#timeline",
+			link: "/",
 		},
 		{
 			name: "Overview",
@@ -55,15 +54,38 @@ const Navbar = ({ contact }: proTypes) => {
 		},
 	];
 
+	// if (location.pathname == "/contact") {
+	// 	return (
+	// 		<div
+	// 			className={`bg-transparent w-full ${
+	// 				!contact && "border-b"
+	// 			} border-[#ffffff2e] h-auto px-[28px] sm:px-[128px] flex items-center justify-between sm:pt-[40px] pt-5 pb-[15px] z-50`}
+	// 		>
+	// 			<div className="flex justify-end">
+	// 				<button onClick={() => handleNav("/")}>
+	// 					<BackSVG />
+	// 				</button>
+	// 			</div>
+	// 		</div>
+	// 	);
+	// }
+
 	return (
 		<div
 			className={`bg-transparent w-full ${
 				!contact && "border-b"
 			} border-[#ffffff2e] h-auto px-[28px] sm:px-[128px] flex items-center justify-between sm:pt-[40px] pt-5 pb-[15px] z-50`}
 		>
-			<h1 role="button" onClick={() => handleNav("/")} className="logo text-white sm:text-4xl font-cd-bold">
-				get <span className="text-base-2">linked</span>
-			</h1>
+			{location.pathname !== "/auth" ? (
+				<h1 role="button" onClick={() => handleNav("/")} className="logo text-white sm:text-4xl font-cd-bold">
+					get <span className="text-base-2">linked</span>
+				</h1>
+			) : (
+					// <p className="font-cd-bold text-sm text-base-2">Register</p>
+					<h1 role="button" onClick={() => handleNav("/")} className="logo text-white sm:text-4xl font-cd-bold">
+					get <span className="text-base-2">linked</span>
+				</h1>
+			)}
 
 			{/* mobile menu */}
 			<button onClick={handlemenu} className="menu sm:hidden">
@@ -79,23 +101,28 @@ const Navbar = ({ contact }: proTypes) => {
 			<div className="sm:flex items-center space-x-[121px] hidden">
 				<nav className="flex items-center space-x-[56px]">
 					{navList.map((i: any, k: number) => (
-						<div role="button" onClick={() => handleNav(i.link)} key={k} className="navlist">
+						<div role="button" onClick={() => handleNav(i.link)} key={k} className={`navlist ${location.pathname ==  i.link.toLowerCase()  && "active" }`}>
 							{i.name}
 						</div>
 					))}
 				</nav>
 
-				<button onClick={() => handleNav("/auth")} className="btn">
-					Register
-				</button>
+				{location.pathname !== "/auth" ? (
+					<button onClick={() => handleNav("/auth")} className="btn ">
+						Register
+					</button>
+				) : (
+					<div role="button"  onClick={() => handleNav("/")} className="active_btn  p-[2px]  base-grad rounded">
+						<div className="bg-base w-full h-full centered rounded">Register</div>
+					</div>
+				)}
 			</div>
 
 			{showMenu && (
 				<div className="w-full bg-base  fixed top-0 left-0 h-[380px] p-6 z-50 space-y-3 shadow-sm">
 					<div className="flex justify-end">
 						<button onClick={handlemenu}>
-
-						<TimesSVG />
+							<TimesSVG />
 						</button>
 					</div>
 
@@ -135,5 +162,20 @@ function TimesSVG() {
 		</svg>
 	);
 }
+
+// function BackSVG() {
+// 	return (
+// 		<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+// 			<circle cx="11.5" cy="11.5" r="11" stroke="url(#paint0_linear_177_298)" />
+// 			<path d="M12.2666 9.20001L9.19995 12.2667L12.2666 14.5667" stroke="white" />
+// 			<defs>
+// 				<linearGradient id="paint0_linear_177_298" x1="11.5" y1="0" x2="11.5" y2="23" gradientUnits="userSpaceOnUse">
+// 					<stop stop-color="#903AFF" />
+// 					<stop offset="1" stop-color="#FF26B9" />
+// 				</linearGradient>
+// 			</defs>
+// 		</svg>
+// 	);
+// }
 
 export default Navbar;

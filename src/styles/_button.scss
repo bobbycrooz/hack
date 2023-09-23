@@ -13,20 +13,16 @@
 	font-weight: 400;
 	line-height: normal;
 
-
-	&.small{
+	&.small {
 		width: 152px;
-height: 46.837px;
-	font-size: 14px;
-
-
+		height: 46.837px;
+		font-size: 14px;
 	}
 
-	&.full{
+	&.full {
 		width: 100%;
 	}
 
-	
 	&.primary {
 		@apply text-white bg-[#c81e19];
 	}
@@ -42,4 +38,10 @@ height: 46.837px;
 	&:disabled {
 		@apply bg-gray-200 text-gray-50 border border-gray-50  space-x-6  cursor-not-allowed;
 	}
+}
+
+.active_btn {
+	width: 172px;
+	height: 53px;
+	flex-shrink: 0;
 }
