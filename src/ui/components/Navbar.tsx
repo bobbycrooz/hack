@@ -59,7 +59,7 @@ const Navbar = ({ contact }: proTypes) => {
 		<div
 			className={`bg-transparent w-full ${
 				!contact && "border-b"
-			} border-[#ffffff2e] h-auto px-[24px] sm:px-[128px] flex items-center justify-between sm:pt-[40px] pt-5 pb-[15px] z-50`}
+			} border-[#ffffff2e] h-auto px-[28px] sm:px-[128px] flex items-center justify-between sm:pt-[40px] pt-5 pb-[15px] z-50`}
 		>
 			<h1 role="button" onClick={() => handleNav("/")} className="logo text-white sm:text-4xl font-cd-bold">
 				get <span className="text-base-2">linked</span>
