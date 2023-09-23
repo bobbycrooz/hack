@@ -38,11 +38,11 @@ const Navbar = ({ contact }: proTypes) => {
 	const navList = [
 		{
 			name: "Timeline",
-			link: "/",
+			link: "/timeline",
 		},
 		{
 			name: "Overview",
-			link: "/",
+			link: "/overview",
 		},
 		{
 			name: "FAQs",
