@@ -3,13 +3,13 @@ import Navbar from "@components/Navbar";
 import { contactAPI } from "@/api/endpoints/auth.endpoint";
 
 const Contact: React.FC = () => {
-
 	const [cred, setCredentials] = useState({
 		email: "sample@eexample.com",
 		phone_number: "",
 		first_name: "Space Explore",
 		message: "I need further info",
 	});
+	const [isLoading, setIsloading] = useState(false);
 
 	function handleChange(e: ChangeEvent<HTMLInputElement>, field: string) {
 		e.preventDefault();
@@ -20,22 +20,22 @@ const Contact: React.FC = () => {
 		});
 	}
 
+	async function onSubmit(e: FormEvent<HTMLFormElement>) {
+		e.preventDefault();
 
-	async function onSubmit(e: FormEvent<HTMLFormElement>)
-	{
-		e.preventDefault()
-
-		console.log(cred);
+		setIsloading(true);
 
 		// @ts-ignore
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-		const { error, serverResponse } = await contactAPI(cred)
-		
-		console.log(serverResponse);
-		
-		
-	}
+		const { error, serverResponse } = await contactAPI(cred);
 
+		if (!error) {
+			setIsloading(!true);
+			alert("Success!");
+		}
+
+		setIsloading(!true);
+	}
 
 	return (
 		<section id="contact" className="contact_section bg-base w-screen min-h-screen">
@@ -98,11 +98,35 @@ const Contact: React.FC = () => {
 					</div>
 
 					<form action="" className="w-full space-y-[35px]" onSubmit={onSubmit}>
-						<input type="text" name="fullName" id="" className="" placeholder="First Name" value={cred.first_name} onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e, 'first_name')} />
-						<input type="email" name="mail" id="" className="" placeholder="Mail" value={cred.email} onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e, 'email')} />
-						<textarea name="" id="" cols={30} rows={10} placeholder="Message" value={cred.message} onChange={(e: any) => handleChange(e, 'message')} ></textarea>
+						<input
+							type="text"
+							name="fullName"
+							id=""
+							className=""
+							placeholder="First Name"
+							value={cred.first_name}
+							onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e, "first_name")}
+						/>
+						<input
+							type="email"
+							name="mail"
+							id=""
+							className=""
+							placeholder="Mail"
+							value={cred.email}
+							onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e, "email")}
+						/>
+						<textarea
+							name=""
+							id=""
+							cols={30}
+							rows={10}
+							placeholder="Message"
+							value={cred.message}
+							onChange={(e: any) => handleChange(e, "message")}
+						></textarea>
 						<div className="w-full justify-center sm:justify-start flex">
-							<button className="btn small sm:btn">Submit</button>
+							<button disabled={ isLoading} className={`btn small sm:btn ${isLoading && "disabled:cursor-wait"}`}>Submit</button>
 						</div>
 					</form>
 

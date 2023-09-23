@@ -14,7 +14,7 @@ const Register: React.FC = () => {
 	});
 
 	const [categoryList, setCatList] = useState([]);
-	// const [isLoading, setIsloading] = useState(false);
+	const [isLoading, setIsloading] = useState(false);
 
 	function handleChange(e: ChangeEvent<HTMLInputElement>, field: string) {
 		e.preventDefault();
@@ -28,11 +28,14 @@ const Register: React.FC = () => {
 	async function onSubmit(e: FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
+		setIsloading(true)
+
 		const { error, serverResponse } = await RegisterAPI(cred);
 
 		if (!error)
 		{
 			console.log('registered', serverResponse);
+		setIsloading(!true)
 			
 		}
 
@@ -246,7 +249,7 @@ const Register: React.FC = () => {
 							</p>
 						</div>
 						<div className="w-full mt-[22px] flex justify-center">
-							<button className="btn">Register Now</button>
+							<button disabled={isLoading} className={`btn  ${isLoading && "disabled:cursor-wait"}`}>Register Now</button>
 						</div>
 					</form>
 				</div>
