@@ -91,10 +91,13 @@ const Navbar = ({ contact }: proTypes) => {
 			</div>
 
 			{showMenu && (
-				<div className="w-full bg-base  fixed top-0 left-0 h-[300px] p-6 z-50 space-y-3 shadow-sm">
-					<button onClick={handlemenu}  className="flex justify-end">
+				<div className="w-full bg-base  fixed top-0 left-0 h-[380px] p-6 z-50 space-y-3 shadow-sm">
+					<div className="flex justify-end">
+						<button onClick={handlemenu}>
+
 						<TimesSVG />
-					</button>
+						</button>
+					</div>
 
 					<div className="">
 						<nav className="space-y-3">
