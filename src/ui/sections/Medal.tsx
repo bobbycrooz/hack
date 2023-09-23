@@ -1,35 +1,35 @@
-
-
 const Big: React.FC = () => {
 	return (
 		<>
 			{/*
 			 */}
 
-			<section id="medal" className="w-full bg-base py-[36px] flex justify-center px-[200px] items-center relative">
+			<section
+				id="medal"
+				className="w-full bg-base py-[36px] flex flex-col sm:flex-row justify-center sm:px-[200px] px-[64px] items-center relative"
+			>
 				{/* <img src="/h-glow3.png" alt="" className="w-[400px] h-[950px] right-0 top-20 absolute z-0 " /> */}
 
 				{/*  */}
-				<div id="h-cup" className="h-cup w-[548px] h-[485px] relative">
-					{/* <img src="/h-glow2.png" alt="" className="w-[800px] h-[400px] right-0 bottom-[10px] absolute z-0" /> */}
-					{/* <img src="/h-cup.png" className="w-full h-full" alt="" /> */}
-				</div>
+				<div id="h-cup" className="h-cup hidden md:flex sm:w-[548px] w-[321px] sm:h-[485px] h-[285px] relative" />
 
 				<div className="spave w-[109px]"></div>
 
 				{/*  */}
 				{/* text */}
-				<div className="  w-[540px] relative  h-[750px] flex flex-col items-center">
-					<div className="text-left w-[401px]  ">
-						<h1 className="into font-cd-bold text-[32px] g">Prizes and</h1>
-						<h1 className="text-base-2 font-cd-bold text-[32px]">Rewards</h1>
+				<div className="  sm:w-[540px] relative  sm:h-[750px] flex flex-col items-center justify-center">
+					<div className="sm:text-left text-center sm:w-[401px]  ">
+						<h1 className="into font-cd-bold text-[20px] sm:text-[32px] g">Prizes and</h1>
+						<h1 className="text-base-2 font-cd-bold text-[20px] sm:text-[32px]">Rewards</h1>
 
-						<p className="body font-mon text-sm  text-left w-[90%]  leading-[27.5px] ">
+						<p className="body font-mon sm:text-sm text-xs w-[80%] mx-auto sm:mx-0 text-center sm:text-left sm:w-[90%]  leading-[27.5px] ">
 							Highlight of the prizes or rewards for winners and for participants.
 						</p>
 					</div>
 
-					<div id="rewards" className="mt-9 w-[600px] h-[400px]  relative">
+					<div id="h-cup" className="h-cup sm:w-[548px] w-[321px] sm:h-[485px] h-[285px] relative mt-10 sm:hidden" />
+
+					<div id="rewards" className="mt-9 w-full h-[200px]  sm:w-[600px] sm:h-[400px]  relative">
 						{/* <img src="/medal.png" className="w-full h-full" alt="" /> */}
 					</div>
 				</div>
@@ -38,14 +38,14 @@ const Big: React.FC = () => {
 			{/*  */}
 			<section
 				id="partner"
-				className="partner w-full h-auto p-[114px] border-b border-[#ffffff4d]  flex flex-col items-center bg-base"
+				className="partner w-full h-auto sm:p-[114px] p-10 border-b border-[#ffffff4d]  flex flex-col items-center bg-base"
 			>
 				{/* head */}
 				<div className="header w-full flex justify-center mt-[2px]">
-					<div className="w-[446px] text-white text-center ">
-						<h1 className="font-cd-bold ">Partners and Sponsors</h1>
+					<div className="sm:w-[446px] w-full text-white text-center ">
+						<h1 className="font-cd-bold text-xl sm:text-[32px]">Partners and Sponsors</h1>
 
-						<p className="font-mon text-sm  leading-[172.4%]">
+						<p className="font-mon sm:text-sm text-xs  leading-[172.4%]">
 							Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors
 						</p>
 					</div>
@@ -53,8 +53,9 @@ const Big: React.FC = () => {
 
 				{/* patners */}
 
-				<div className="w-[90%] h-[540px] rounded centered border border-base-2  mt-[65px]">
-					<img src="/h-pat.png" alt="" className="patner w-[878px] h-[252px]" />
+				<div className="w-full sm:w-[90%] sm:h-[540px] h-[150px] p-6 rounded centered border border-base-2  sm:mt-[65px] mt-[40px]">
+					<img src="/h-pat.png" alt="" className="patner sm:w-[878px] w-[240px] h-[77px] sm:h-[252px] hidden sm:flex" />
+					<img src="/h-pat-m.png" alt="" className="patner   sm:hidden" />
 				</div>
 			</section>
 
@@ -62,39 +63,39 @@ const Big: React.FC = () => {
 
 			<section
 				id="guard"
-				className="partner w-full h-auto p-8 border-b border-[#ffffff4d]  flex justify-center py-[77px] bg-base"
+				className="partner w-full h-auto p-8 border-b border-[#ffffff4d]  flex flex-col sm:flex-row justify-center py-[77px] bg-base"
 			>
 				{/* <img src="/h-glow3.png" alt="" className="w-[400px] h-[950px] right-0 top-20 absolute z-0 br " /> */}
 				{/* text */}
-				<div className="  w-[540px] relative">
+				<div className="w-full text-center sm:text-left  sm:w-[540px] relative">
 					{/* <img src="/h-glow2.png" alt="" className="w-[800px] h-[400px] right-0 bottom-[10px] absolute z-0" /> */}
 
-					<h1 className="into font-cd-bold text-[32px] g">Privacy Policy and</h1>
-					<h1 className="text-base-2 font-cd-bold text-[32px]">Terms</h1>
+					<h1 className="into font-cd-bold sm:text-[32px] text-xl">Privacy Policy and</h1>
+					<h1 className="text-base-2 font-cd-bold sm:text-[32px] text-xl mt-1">Terms</h1>
 
-					<p className="body font-mon text-sm  text-left w-[90%]  leading-[27.5px] text-[#ffffff58]">
+					<p className="body font-mon text-xs sm:text-sm   sm:w-[90%]  leading-[27.5px] text-[#ffffff58]">
 						Last updated on September 12, 2023
 					</p>
 
-					<p className="body font-mon text-sm  text-left w-[90%]  leading-[27.5px] ">
+					<p className="body font-mon sm:text-sm text-[12px]   sm:w-[90%]  sm:leading-[27.5px] leading-[22.68px]">
 						Below are our privacy & policy, which outline a lot of goodies. it’s our aim to always take of our
 						participant
 					</p>
 
-					<div className="list w-full mt-[60px] h-auto px-[70px] py-[56px] border border-base-2 rounded bg-[#ffffff0a]">
-						<p className="body font-mon text-sm   leading-[27.5px] ">
+					<div className="list w-full mt-[60px] h-auto sm:px-[70px] px-4 py-10  sm:py-[56px] border border-base-2 rounded bg-[#0906060a]">
+						<p className="body font-mon sm:text-sm text-[12px] leading-[25px]  sm:leading-[27.5px] text-justify">
 							At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal
 							information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you
 							participate in our tech hackathon event. By participating in our event, you consent to the practices
 							described in this policy.
 						</p>
 
-						<div className="mt-6">
+						<div className="mt-6 text-left">
 							<h1 className="text-base-2 font-cd-bold">Licensing Policy</h1>
 							<h1 className="into font-mon text-sm font-bold">Here are terms of our Standard License:</h1>
 						</div>
 
-						<div className="list_item flex space-x-2 items-start mt-4">
+						<div className="list_item flex space-x-2 items-start mt-4 text-left">
 							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
 								<circle cx="8.5" cy="8.5" r="8.5" fill="#2DE100" />
 								<path d="M5 8L7 10.5L13.5 6" stroke="white" stroke-width="2" />
@@ -105,7 +106,7 @@ const Big: React.FC = () => {
 							</p>
 						</div>
 
-						<div className="list_item flex space-x-2 items-start mt-4">
+						<div className="list_item flex space-x-2 items-start mt-4 text-left">
 							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
 								<circle cx="8.5" cy="8.5" r="8.5" fill="#2DE100" />
 								<path d="M5 8L7 10.5L13.5 6" stroke="white" stroke-width="2" />
@@ -117,18 +118,18 @@ const Big: React.FC = () => {
 						</div>
 
 						<div className="w-full mt-4 flex  justify-center">
-							<button className="btn">Read More</button>
+							<button className="btn small">Read More</button>
 						</div>
 					</div>
 				</div>
 
-				<div className="spave w-[39px]"></div>
+				<div className="spave h-9 w-[39px]"></div>
 
-				<img src="/h-guard.png" alt="" className="sr w-[600px] h-[920px]" />
+				<img src="/h-guard.png" alt="" className="sr sm:w-[600px] sm:h-[920px]" />
 			</section>
 
-			<footer className="w-full px-[220px] py-[70px]">
-				<div className="footer_content flex  h-[200px] justify-between">
+			<footer className="w-full sm:px-[220px] py-[70px] px-16">
+				<div className="footer_content flex flex-col  sm:flex-row sm:h-[200px] justify-between w-full sm:w-auto">
 					<div className="first_ h-full justify-between flex  flex-col">
 						{/*  */}
 						<div className="b">
@@ -136,26 +137,26 @@ const Big: React.FC = () => {
 								get <span className="text-base-2">linked</span>
 							</h1>
 
-							<p className="body font-mon text-xs   leading-[172.4%]  w-[410px]">
+							<p className="body font-mon text-xs mt-3  leading-[172.4%]  sm:w-[410px] w-[271px]">
 								Getlinked Tech Hackathon is a technology innovation program established by a group of organizations with
 								the aim of showcasing young and talented individuals in the field of technology
 							</p>
 						</div>
 
-						<p className="body font-mon text-xs text-white flex items-center  leading-[27.5px] ">
+						<p className="body font-mon text-xs text-white flex items-center mt-10 sm:mt-0  leading-[27.5px] ">
 							Terms of Use <div className="h-4 border border-base-1 mx-2 w-[1px]"></div>Privacy Policy
 						</p>
 					</div>
 
-					<div className="first_ h-full justify-between flex  flex-col">
+					<div className="first_ h-full justify-between flex  flex-col mt-8 sm:mt-0 space-y-4 sm:space-y-0">
 						{["Usefull link", "Overview", "Timeline", "FAQs", "Register"].map((i: string, k: number) => (
-							<p key={k} className={`text-sm font-mon font-semibold ${k == 0 ? "text-base-1" : "text-white"} `}>
+							<p key={k} className={`text-sm font-mon font-semibold ${k == 0 ? "text-base-2" : "text-white"} `}>
 								{i}
 							</p>
 						))}
 
 						<div className="flex space-x-4 items-center">
-							<p className={`text-base-1 font-xs`}>Follow us</p>
+							<p className={`text-base-2 font-xs`}>Follow us</p>
 
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 								<path
@@ -187,8 +188,8 @@ const Big: React.FC = () => {
 						</div>
 					</div>
 
-					<div className="first_ h-full space-y-5 flex flex-col ">
-						<p className={`text-sm font-mon font-semibold text-base-1`}>Contact Us</p>
+					<div className="first_ h-full space-y-5 flex flex-col mt-[64px] sm:mt-0">
+						<p className={`text-sm font-mon font-semibold text-base-2`}>Contact Us</p>
 
 						<div className="flex items-start space-x-2">
 							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -215,6 +216,11 @@ const Big: React.FC = () => {
 
 							<p className="text-white w-[89px] font-mon text-xs">27,Alara Street Yaba 100012 Lagos State</p>
 						</div>
+					</div>
+
+
+					<div className="w-full sm:hidden mt-[60px]">
+						<p className="font-mon text-[12px] text-white text-center">All rights reserved. © getlinked Ltd.</p>
 					</div>
 				</div>
 			</footer>

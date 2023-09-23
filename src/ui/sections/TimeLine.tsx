@@ -10,9 +10,9 @@ const TimeLine: React.FC = () => {
 			{/* head */}
 			<div className="header w-full flex justify-center mt-[2px]">
 				<div className="w-[346px] text-white text-center">
-					<h1 className="font-cd-bold ">TimeLine</h1>
+					<h1 className="font-cd-bold text-xl sm:text-[32px]">TimeLine</h1>
 
-					<p className="font-mon text-sm  leading-[172.4%]">
+					<p className="font-mon md:text-sm text-xs  leading-[172.4%]">
 						Here is the breakdown of the time we anticipate using for the upcoming event.
 					</p>
 				</div>

@@ -16,7 +16,7 @@ body {
 	font-family: "Montserrat", sans-serif;
 	// overflow-x: hidden;
 
-		&::-webkit-scrollbar {
+	&::-webkit-scrollbar {
 		width: 0px;
 		height: 0;
 	}
@@ -53,19 +53,25 @@ body {
 	opacity: 68%;
 }
 
-
-
-
-
 #hero {
-	background-image: url("/h-globe.png"), url("/h-glow1.png"), url("/h-boy.png"), url("/h-glow2.png"), url("/h-matrix.png");
-	background-position: right 50px bottom 50px, top 0px left 0px, right 0px bottom 0px, bottom 50px right -150px , right 0 bottom 0;
-	background-size:  40%,50%, 45%, 50%, 60%;
+	background-image: url("/h-globe.png"), url("/h-glow1.png"), url("/h-boy.png"), url("/h-glow2.png"),
+		url("/h-matrix.png");
+	background-position: right 50px bottom 50px, top 0px left 0px, right 0px bottom 0px, bottom 50px right -150px,
+		right 0 bottom 0;
+	background-size: 40%, 50%, 45%, 50%, 60%;
 	background-repeat: no-repeat;
 	background-blend-mode: hard-light, hard-light, luminosity, hard-light, luminosity;
+
+	@include smallPhone {
+		background-image: url("/h-globe.png"), url("/h-glow1.png"), url("/h-boy.png"), url("/h-glow2.png"),
+			url("/h-matrix.png");
+		background-position: right 0px bottom 0px, top 0px left 0px, right -20px bottom 0px, bottom 0px right 0px,
+			right 0 bottom 0;
+		background-size: 100%, 100%, 105%, 50%, 60%;
+		background-repeat: no-repeat;
+		background-blend-mode: hard-light, hard-light, luminosity, hard-light, luminosity;
+	}
 }
-
-
 
 .timeline {
 	.bullet {
@@ -82,6 +88,16 @@ body {
 			font-style: normal;
 			font-weight: 700;
 			line-height: normal;
+		}
+
+		@include smallPhone {
+			width: 25.32px;
+			height: 25.32px;
+			flex-shrink: 0;
+
+			.number {
+				font-size: 12px;
+			}
 		}
 	}
 }
@@ -156,32 +172,29 @@ textarea {
 	@apply h-[119px];
 }
 
-
-
-#rules{
-		background-image: url("/h-glow2.png"), url("/h-glow3.png");
+#rules {
+	background-image: url("/h-glow2.png"), url("/h-glow3.png");
 	background-position: top -100px left 107px, right 0px bottom -155px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-blend-mode: hard-light, hard-light;
 }
 
-#people{
-		background-image: url("/h-glow2.png"), url("/h-glow2.png");
-	background-position: bottom -160px left 50px, right -300px bottom -420px;
+#people {
+	background-image: url("/h-glow2.png"), url("/h-glow2.png");
+	background-position: bottom -160px left 50px, right -400px bottom -420px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-blend-mode: hard-light, hard-light;
 }
 
-#ask{
-		background-image:  url("/h-glow2.png");
-	background-position:  right -300px top -435px;
+#ask {
+	background-image: url("/h-glow2.png");
+	background-position: right -300px top -435px;
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-blend-mode:  hard-light;
+	background-blend-mode: hard-light;
 }
-
 
 // #partner {
 // 	// background-image:url("/h-cup.png"),  url("/h-glow1.png");
@@ -192,19 +205,17 @@ textarea {
 // 	background-blend-mode: hard-light, hard-light;
 // }
 
-
-#partner{
-		background-image: url("/h-glow2.png"), url("/h-glow2.png");
+#partner {
+	background-image: url("/h-glow2.png"), url("/h-glow2.png");
 	background-position: top -120px left -70px, right -300px bottom -220px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-blend-mode: hard-light, hard-light;
 }
 
-
-#guard{
-		background-image:  url("/h-glow2.png");
-	background-position:  left -300px bottom -380px;
+#guard {
+	background-image: url("/h-glow2.png");
+	background-position: left -300px bottom -380px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-blend-mode: hard-light;
