@@ -6,7 +6,7 @@ import SuccessModal from "../components/SuccessModal";
 const Register: React.FC = () => {
 	const [cred, setCredentials] = useState({
 		email: "bobby@eexample.com",
-		phone_number: "cred.email.length == 0",
+		phone_number: "09077726791",
 		team_name: "lazyBones",
 		group_size: 10,
 		project_topic: "Web server propagation",
