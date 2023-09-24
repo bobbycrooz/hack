@@ -28,7 +28,32 @@ const Navbar = ({ contact }: proTypes) => {
 	function handleNav(link: string) {
 		console.log(link);
 
-		navigate(link);
+		if (["/contact", "/auth"].includes(link)) {
+			return navigate(link);
+		}
+
+		if (["/contact", "/auth"].includes(location.pathname)) {
+			navigate("/");
+			setTimeout(() => {
+				const sectionEl = document.getElementById(link);
+
+				sectionEl?.scrollIntoView({
+					behavior: "smooth",
+					block: "start",
+					inline: "nearest",
+				});
+			}, 500);
+		}
+
+		const sectionEl = document.getElementById(link);
+
+		sectionEl?.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+			inline: "nearest",
+		});
+
+		// navigate(link);
 	}
 
 	function handlemenu() {
@@ -38,15 +63,15 @@ const Navbar = ({ contact }: proTypes) => {
 	const navList = [
 		{
 			name: "Timeline",
-			link: "/timeline",
+			link: "timeline",
 		},
 		{
 			name: "Overview",
-			link: "/overview",
+			link: "/",
 		},
 		{
 			name: "FAQs",
-			link: "#ask",
+			link: "ask",
 		},
 		{
 			name: "Contacts",
@@ -81,8 +106,8 @@ const Navbar = ({ contact }: proTypes) => {
 					get <span className="text-base-2">linked</span>
 				</h1>
 			) : (
-					// <p className="font-cd-bold text-sm text-base-2">Register</p>
-					<h1 role="button" onClick={() => handleNav("/")} className="logo text-white sm:text-4xl font-cd-bold">
+				// <p className="font-cd-bold text-sm text-base-2">Register</p>
+				<h1 role="button" onClick={() => handleNav("/")} className="logo text-white sm:text-4xl font-cd-bold">
 					get <span className="text-base-2">linked</span>
 				</h1>
 			)}
@@ -101,7 +126,12 @@ const Navbar = ({ contact }: proTypes) => {
 			<div className="sm:flex items-center space-x-[121px] hidden">
 				<nav className="flex items-center space-x-[56px]">
 					{navList.map((i: any, k: number) => (
-						<div role="button" onClick={() => handleNav(i.link)} key={k} className={`navlist ${location.pathname ==  i.link.toLowerCase()  && "active" }`}>
+						<div
+							role="button"
+							onClick={() => handleNav(i.link)}
+							key={k}
+							className={`navlist ${location.pathname == i.link.toLowerCase() && "active"}`}
+						>
 							{i.name}
 						</div>
 					))}
@@ -112,7 +142,7 @@ const Navbar = ({ contact }: proTypes) => {
 						Register
 					</button>
 				) : (
-					<div role="button"  onClick={() => handleNav("/")} className="active_btn  p-[2px]  base-grad rounded">
+					<div role="button" onClick={() => handleNav("/")} className="active_btn  p-[2px]  base-grad rounded">
 						<div className="bg-base w-full h-full centered rounded">Register</div>
 					</div>
 				)}
