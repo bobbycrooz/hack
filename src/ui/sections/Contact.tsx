@@ -1,6 +1,7 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import Navbar from "@components/Navbar";
 import { contactAPI } from "@/api/endpoints/auth.endpoint";
+import SuccessModalcontact from "../components/SuccessModalcontact";
 
 const Contact: React.FC = () => {
 	const [cred, setCredentials] = useState({
@@ -10,6 +11,13 @@ const Contact: React.FC = () => {
 		message: "I need further info",
 	});
 	const [isLoading, setIsloading] = useState(false);
+	const [showModal, setShowModal] = useState<boolean>(false);
+
+
+
+		function handleShowModal() {
+		setShowModal(!showModal);
+	}
 
 	function handleChange(e: ChangeEvent<HTMLInputElement>, field: string) {
 		e.preventDefault();
@@ -31,7 +39,7 @@ const Contact: React.FC = () => {
 
 		if (!error) {
 			setIsloading(!true);
-			alert("Success!");
+			handleShowModal()
 		}
 
 		setIsloading(!true);
@@ -40,6 +48,9 @@ const Contact: React.FC = () => {
 	return (
 		<section id="contact" className="contact_section bg-base w-screen min-h-screen">
 			<Navbar contact />
+			
+			<SuccessModalcontact showModal={showModal} handleShowModal={handleShowModal} />
+
 
 			<div className="content flex justify-center w-full mt-6">
 				{/*  */}
