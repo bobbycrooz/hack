@@ -1,17 +1,17 @@
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 interface ModalTypes {
-	showModal: boolean;
+      showModal: boolean;
+      handleShowModal: any;
 }
 
-const SuccessModal = ({ showModal }: ModalTypes) => {
+const SuccessModal = ({ showModal, handleShowModal }: ModalTypes) => {
 	// const [queryParameters] = useSearchParams();
 	// const filter = queryParameters.get("filter");
 	// const { pathname } = useLocation();
-	// const [authMode, setAuthMode] = useState<boolean>();
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 	const modalRef = useRef(null);
 
 	// const { authService } = useAuth();
@@ -22,7 +22,7 @@ const SuccessModal = ({ showModal }: ModalTypes) => {
 
 	function handleBackDropt(e: any) {
 		if (showModal && modalRef.current == e.target) {
-			navigate("/");
+			handleShowModal()
 		}
 	}
 
@@ -37,19 +37,19 @@ const SuccessModal = ({ showModal }: ModalTypes) => {
 				onClick={handleBackDropt}
 				ref={modalRef}
 			>
-				<div className="card rounded border border-base-2 p-8 sm:w-[699px] flex flex-col items-center text-white text-center">
+				<div className="card rounded border w-[90%]  border-base-2 p-8 sm:w-[699px] flex flex-col items-center text-white text-center">
 					<img src="/h-congrats.svg" alt="" className="" />
 
-					<h1 className="font-mon text-[32px] font-semibold">Congratulations</h1>
-					<h1 className="font-mon text-[32px] font-semibold">you have successfully Registered!</h1>
+					<h1 className="font-mon sm:text-[32px] font-semibold">Congratulations</h1>
+					<h1 className="font-mon sm:text-[32px] font-semibold">you have successfully Registered!</h1>
 
-					<p className="font-mon text-xs font-semibold mt-[15px] flex ">Yes, it was easy and you did it!</p>
-					<p className="font-mon text-xs font-semibold  flex  items-center mt-2">
+					<p className="font-mon text-[12px] sm:text-xs font-semibold mt-[15px] flex ">Yes, it was easy and you did it!</p>
+					<p className="font-mon text-[12px] sm:text-xs font-semibold  flex  items-center mt-2">
 						check your mail box for next step
 						<img src="/wink.svg" className="" alt="" />
 					</p>
 
-					<button className="btn full mt-[38px]">Back</button>
+					<button onClick={handleShowModal} className="btn full mt-[38px]">Back</button>
 				</div>
 			</motion.div>
 		</AnimatePresence>
