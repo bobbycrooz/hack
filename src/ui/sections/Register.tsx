@@ -1,6 +1,7 @@
 import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import Navbar from "@components/Navbar";
 import { RegisterAPI, categoryAPI } from "@/api/endpoints/auth.endpoint";
+import SuccessModal from "../components/SuccessModal";
 
 const Register: React.FC = () => {
 	const [cred, setCredentials] = useState({
@@ -28,9 +29,12 @@ const Register: React.FC = () => {
 	async function onSubmit(e: FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
+		console.log('submiting.');
+		
+
 		setIsloading(true)
 
-		const { error, serverResponse } = await RegisterAPI(cred);
+		const { error, serverResponse } = await RegisterAPI(cred);	
 
 		if (!error)
 		{
@@ -47,7 +51,7 @@ const Register: React.FC = () => {
 		const { error, serverResponse } = await categoryAPI();
 
 		if (!error) {
-			setCatList(serverResponse.data)
+			setCatList(serverResponse as any)
 			console.log(serverResponse, "--");
 		}
 	}
@@ -254,6 +258,8 @@ const Register: React.FC = () => {
 					</form>
 				</div>
 			</div>
+
+			<SuccessModal showModal={true} />
 		</section>
 	);
 };

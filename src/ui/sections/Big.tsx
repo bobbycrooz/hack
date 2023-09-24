@@ -35,9 +35,6 @@ const faqLiat = [
 
 const Big: React.FC = () => {
 	// const [shortLink, setShortLink] = useState<string>("");
-
-
-
 	return (
 		<>
 			<section className="w-full bg-base sm:py-[56px] border-b border-[#ffffff4d] flex flex-col px-[49px] py-[30px] sm:flex-row sm:justify-center sm:px-[200px] items-center">

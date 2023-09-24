@@ -130,7 +130,7 @@ const Contact: React.FC = () => {
 						</div>
 					</form>
 
-					<div className="flex justify-center w-full">
+					<div className="flex justify-center w-full">		
 						<li className="flex flex-col sm:hidden text-center">
 							<p className="text-base-1">Share on</p>
 

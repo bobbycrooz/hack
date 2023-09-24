@@ -95,11 +95,13 @@ const Big: React.FC = () => {
 							<h1 className="into font-mon text-sm font-bold">Here are terms of our Standard License:</h1>
 						</div>
 
-						<div className="list_item flex space-x-2 items-start mt-4 text-left">
-							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-								<circle cx="8.5" cy="8.5" r="8.5" fill="#2DE100" />
-								<path d="M5 8L7 10.5L13.5 6" stroke="white" stroke-width="2" />
-							</svg>
+						<div className="list_item flex space-x-2 items-start mt-4 text-left ">
+							<div className="bullet_icone w-[17px] mt-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+									<circle cx="8.5" cy="8.5" r="8.5" fill="#2DE100" />
+									<path d="M5 8L7 10.5L13.5 6" stroke="white" stroke-width="2" />
+								</svg>
+							</div>
 
 							<p className="body font-mon text-sm   leading-[27.5px] ">
 								The Standard License grants you a non-exclusive right to navigate and register for our event
@@ -107,10 +109,12 @@ const Big: React.FC = () => {
 						</div>
 
 						<div className="list_item flex space-x-2 items-start mt-4 text-left">
-							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-								<circle cx="8.5" cy="8.5" r="8.5" fill="#2DE100" />
-								<path d="M5 8L7 10.5L13.5 6" stroke="white" stroke-width="2" />
-							</svg>
+							<div className="bullet_icone w-[17px]  mt-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+									<circle cx="8.5" cy="8.5" r="8.5" fill="#2DE100" />
+									<path d="M5 8L7 10.5L13.5 6" stroke="white" stroke-width="2" />
+								</svg>
+							</div>
 
 							<p className="body font-mon text-sm   leading-[27.5px] ">
 								The Standard License grants you a non-exclusive right to navigate and register for our event
@@ -217,7 +221,6 @@ const Big: React.FC = () => {
 							<p className="text-white w-[89px] font-mon text-xs">27,Alara Street Yaba 100012 Lagos State</p>
 						</div>
 					</div>
-
 
 					<div className="w-full sm:hidden mt-[60px]">
 						<p className="font-mon text-[12px] text-white text-center">All rights reserved. © getlinked Ltd.</p>

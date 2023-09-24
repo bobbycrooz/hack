@@ -3,7 +3,7 @@ import Navbar from "@components/Navbar";
 
 const Hero: React.FC = () => {
 	return (
-		<div id="hero" className="w-screen h-[130vh] sm:h-[100vh] bg-base relative border-b border-[#ffffff4d]">
+		<div id="hero" className="w-screen h-[124vh] sm:h-[100vh] bg-base relative border-b border-[#ffffff4d]">
 			<Navbar />
 
 			{/* italic */}
