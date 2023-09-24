@@ -95,7 +95,7 @@ const TimeLineBullet = () => {
 
 			<div className="timeline  h-auto w-8  flex flex-col items-start justify-start  sm:hidden">
 				{timeLineData.map((i: any, k: number) => (
-					<div key={k} className={`bullet rounded-full centered  mt-[110px]  relative br`}>
+					<div key={k} className={`bullet rounded-full centered  mt-[110px]  relative`}>
 						{/* bullet tail */}
 						<div className={`bullet_tail w-1 h-[70px] bg-base-2 absolute bottom-8`}></div>
 

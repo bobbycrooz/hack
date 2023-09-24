@@ -3,12 +3,16 @@ import Navbar from "@components/Navbar";
 
 const Hero: React.FC = () => {
 	return (
-		<div id="hero" className="w-screen h-[124vh] sm:h-[100vh] bg-base relative border-b border-[#ffffff4d]">
+		<div id="hero" className="w-screen h-[124vh] sm:h-[100vh] bg-base relative border-b border-[#FFFFFF2E]">
+			{/* stars */}
+			{/* <img src="/h-star.svg" alt="" className="star absolute br  animate-pulse" /> */}
+
+
 			<Navbar />
 
 			{/* italic */}
 			<div className="w-full sm:px-[77px] flex justify-center sm:justify-end mt-8">
-				<h1 className="font-mon w-auto  sm:text-[36px] font-bold italic  relative">
+				<h1 className="font-mon w-auto  sm:text-[32px] font-bold italic  relative">
 					Igniting a Revolution in HR Innovation
 					<div className="absolute right-1 -bottom-2 hidden sm:flex">
 						<svg xmlns="http://www.w3.org/2000/svg" width="255" height="17" viewBox="0 0 255 17" fill="none">
@@ -23,28 +27,16 @@ const Hero: React.FC = () => {
 				</h1>
 			</div>
 
-			{/* star 1 */}
-			{/* <img src="/h-star-white.svg" alt="" className="w-[26px] h-[32px] left-[140px] absolute" /> */}
-
-			{/* blur */}
-			{/* <img src="/h-glow.svg" alt="" className="w-[600px] h-[700px] absolute left-[30px] -top-[40px]" /> */}
-			{/* <div className="w-[1080px] h-[700px]  glow absolute left-[0px] top-[50px] "></div> */}
-
-			{/* matrix */}
-			{/* <div className="matrix w-full h-full absolute right-0 bottom-0  bg"> */}
-			{/* <img src="/h-glow.svg" alt="" className="w-[800px] h-[800px] right-0 bottom-[10px] absolute z-0" />
-				<img src="/h-boy.png" alt="" className="w-[700px] h-[600px] right-0 bottom-0 absolute man" />
-				<img src="/h-globe.png" alt="" className="w-[500px] h-[500px] right-[120px] bottom-[120px] absolute" /> */}
-			{/* </div> */}
-
-			{/* <img src="/h-fuck.png" alt="" className="w-[700px] h-[600px] right-0 bottom-0 absolute man" /> */}
+		
 
 			{/* hero  -desktop*/}
 			<div className="hidden sm:block hero_text absolute top-[90%] -translate-y-[90%]  text-[80px] font-cd-bold ml-[128px]">
 				<h1 className="hero_title relative  w-[660px] leading-normal">
 					<img src="/h-idea.svg" alt="" className="idea absolute w-[53px] h-[73px] right-[60px] -top-[40px]" />
 					{/* star 2 */}
-					<img src="/h-star.svg" alt="" className="w-[26px] h-[32px] -right-[20px] -top-[10px] absolute" />
+					<img src="/h-star.svg" alt="" className="w-[26px] h-[32px] -right-[20px] -top-[10px] absolute animate-pulse" />
+			<img src="/h-star-white.svg" alt="" className="star absolute   animate-pulse -top-[50px] left-[0px] " />
+
 					getLinked Tech
 				</h1>
 				{/*  */}
@@ -81,7 +73,7 @@ const Hero: React.FC = () => {
 					</p>
 
 					{/* star 3 */}
-					<img src="/h-star.svg" alt="" className="w-[26px] h-[32px] -right-[60%] -top-[20px] absolute" />
+					<img src="/h-star.svg" alt="" className="w-[26px] h-[32px] -right-[60%] -top-[20px] absolute animate-pulse" />
 				</div>
 			</div>
 
