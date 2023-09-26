@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "@components/Navbar";
+import { motion } from "framer-motion";
+import { titleVariants } from "../components/Animation";
 
 const Hero: React.FC = () => {
 	return (
@@ -11,8 +13,9 @@ const Hero: React.FC = () => {
 			<Navbar />
 
 			{/* italic */}
-			<div className="w-full sm:px-[77px] flex justify-center sm:justify-end mt-8">
-				<h1 className="font-mon w-auto  sm:text-[32px] font-bold italic  relative">
+			<div  className="w-full sm:px-[77px] flex justify-center sm:justify-end mt-8">
+				<motion.h1 variants={titleVariants} initial='initial' animate="animate" exit={'exit'} className="font-mon w-auto  sm:text-[32px] font-bold italic  relative">
+
 					Igniting a Revolution in HR Innovation
 					<div className="absolute right-1 -bottom-2 hidden sm:flex">
 						<svg xmlns="http://www.w3.org/2000/svg" width="255" height="17" viewBox="0 0 255 17" fill="none">
@@ -24,7 +27,7 @@ const Hero: React.FC = () => {
 							<path d="M1 9C20.2424 3.71764 70.7273 -3.67768 116 9" stroke="#FF26B9" stroke-width="3" />
 						</svg>
 					</div>
-				</h1>
+				</motion.h1>
 			</div>
 
 		

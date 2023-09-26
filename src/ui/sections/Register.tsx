@@ -209,6 +209,7 @@ const Register: React.FC = () => {
 							</button>
 						</div>
 					</form>
+
 				</div>
 
 				{/* Form --mobile */}
